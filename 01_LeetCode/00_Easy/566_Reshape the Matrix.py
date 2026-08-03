@@ -5,7 +5,7 @@ def matrix_reshape(mat: list, r: int, c: int) -> list:
     if rows * cols != r * c:
         return mat
 
-    new_mat = [[0 for _ in range(c)] for _ in range(r)]
+    new_mat = [[0] * c for _ in range(r)]
 
     for i in range(rows):
         for j in range(cols):
@@ -18,6 +18,6 @@ def matrix_reshape(mat: list, r: int, c: int) -> list:
 
 
 mat1 = [[1, 2], [3, 4]]
-r1 = 1
-c1 = 4
+r1 = 2
+c1 = 2
 print(matrix_reshape(mat1, r1, c1))
